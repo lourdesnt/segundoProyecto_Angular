@@ -1,0 +1,8 @@
+#canal {
+    background-color: #EFD3D7;
+    border-radius: 10px;
+}
+
+#canal * {
+    padding: 10px;
+}

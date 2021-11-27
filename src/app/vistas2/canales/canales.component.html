@@ -1,0 +1,4 @@
+<div id="canales">
+    <h3>¡Encuentra aquí las letras de tus canciones favoritas!</h3>
+    <app-canal *ngFor="let canal of listadoCanales" [canal]="canal" (click)="mostrarCancion(canal.title)"></app-canal>
+</div>
