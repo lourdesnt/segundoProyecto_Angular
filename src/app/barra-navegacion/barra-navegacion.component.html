@@ -1,7 +1,9 @@
 <ul id="barranav">
     <li><a> </a></li>
     <li routerLink="/canales"><a href="/canales">Canciones</a></li>
-    <li><a>Artistas</a></li>
-    <li><a>Buscar</a></li>
+    <li routerLink="/buscar"><a href="/buscar">Buscar</a></li>
     <li routerLink="/about"><a href="/about">About</a></li>
+    <li id="acceso" *ngIf="miToken == 0" class="acceso" routerLink="/login"><a href="/login">Acceso</a></li>
+    <li id="acceso" *ngIf="miToken != 0" class="acceso"
+        (click)="logout()"><span><strong>Usuario:</strong> {{ nombreUsuario }}</span></li>
 </ul>

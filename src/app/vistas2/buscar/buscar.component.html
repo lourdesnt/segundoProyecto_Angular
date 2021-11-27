@@ -1,0 +1,23 @@
+<h3>¿De qué canción quieres aprender la letra?</h3>
+<div id="contenedor" class="form">
+    <form (ngSubmit)="submit()" #cancionForm="ngForm">
+      <div class="form-group">
+        <label for="cancion">Título de la canción: </label>
+        <input type="text" [(ngModel)]="cancion.titulo" name="titulo" #titulo="ngModel" required>
+        <div *ngIf="titulo.invalid && titulo.dirty" class="alert">
+          <div *ngIf="titulo.errors?.required">Campo requerido </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="cancion">Artista: </label>
+        <input type="text" [(ngModel)]="cancion.artista" name="artista" #artista="ngModel" required>
+        <div *ngIf="artista.invalid && artista.dirty" class="alert">
+          <div *ngIf="artista.errors?.required">Campo requerido </div>
+        </div>
+      </div>
+      <button type="submit" [disabled]="!cancionForm.form.valid">Buscar</button>
+    </form>
+  </div>
+  <div id="cancion">
+    <p style="white-space: pre-wrap;">{{ cancion.letra }}</p>
+  </div>

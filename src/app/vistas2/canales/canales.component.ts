@@ -17,6 +17,7 @@ export class CanalesComponent implements OnInit {
 
   ngOnInit(): void {
     this.buscarCancion("Coldplay", "Paradise");
+    this.buscarCancion("One Direction", "What Makes You Beautiful");
   }
 
   private buscarCancion(artista: string, titulo: string): void {
