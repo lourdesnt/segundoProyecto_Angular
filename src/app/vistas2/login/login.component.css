@@ -1,3 +1,21 @@
 div {
     padding: 10px;
 }
+
+h3{
+    margin-left: 20px;
+}
+
+button {
+    background-color: #DEE2FF;
+    border: none;
+    padding: 7px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.val {
+    color: red;
+    font-size: 12px;
+    padding: 3px;
+}
